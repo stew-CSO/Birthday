@@ -1,0 +1,759 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #fff8fa;
+    color: #5f4650;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: clamp(5rem, 18vw, 10rem);
+    line-height: 0.8;
+    color: #a65c72;
+}
+
+h2 {
+    font-size: clamp(3rem, 9vw, 6rem);
+    line-height: 1;
+    color: #744d5a;
+}
+
+h2 span {
+    color: #b66a81;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+.small-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.65rem;
+    color: #b87589;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: #a65c72;
+    font-weight: 500;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    z-index: 2;
+}
+
+.section-content > p {
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+.opening-screen {
+    background:
+        radial-gradient(circle at 50% 40%, #fff 0%, #fff3f6 45%, #f8dce5 100%);
+}
+
+.opening-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.opening-content .small-text {
+    color: #9b6172;
+    margin-bottom: 2rem;
+}
+
+.heart-symbol {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5rem;
+    color: #bd7187;
+    margin: 2rem 0;
+    animation: heartbeat 2s infinite;
+}
+
+.opening-message {
+    margin-bottom: 2rem;
+    color: #87616c;
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 193, 210, 0.25);
+    filter: blur(60px);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-button,
+.scroll-button,
+.replay-button {
+    border: 1px solid #d79aaa;
+    background: rgba(255,255,255,0.6);
+    color: #8c5264;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-button:hover,
+.scroll-button:hover,
+.replay-button:hover {
+    background: #d79aaa;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.main-button span {
+    margin-left: 10px;
+}
+
+.scroll-button {
+    margin-top: 2rem;
+    background: transparent;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-button {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #d79aaa;
+    background: rgba(255,255,255,0.8);
+    color: #a65c72;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday-section {
+    background: #fff8fa;
+}
+
+.divider,
+.letter-divider {
+    color: #c2778d;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story-section {
+    background: #fdf0f4;
+}
+
+.year {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5rem;
+    color: #c2778d;
+    margin: 1rem 0;
+}
+
+.story-card {
+    background: rgba(255,255,255,0.7);
+    padding: 45px 30px;
+    border-radius: 30px;
+    margin: 30px auto;
+    max-width: 650px;
+    box-shadow: 0 15px 50px rgba(120,70,85,0.08);
+}
+
+.story-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   JAMAICA
+========================= */
+
+.jamaica-section {
+    background:
+        linear-gradient(
+            180deg,
+            #fff8fa 0%,
+            #fff0f4 100%
+        );
+}
+
+.jamaica-heart {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.large-text {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5rem !important;
+    color: #9f6074;
+}
+
+
+/* =========================
+   QUIET SECTION
+========================= */
+
+.quiet-section {
+    background: #f8edf0;
+}
+
+.soft-line {
+    width: 80px;
+    height: 1px;
+    background: #d19aaa;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   COMEBACK
+========================= */
+
+.comeback-section {
+    background:
+        radial-gradient(
+            circle at center,
+            #fff 0%,
+            #f9e2e9 100%
+        );
+}
+
+.big-heart {
+    color: #bd6e83;
+    font-size: 5rem;
+    animation: heartbeat 2s infinite;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 750px;
+}
+
+.timeline-item span {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    color: #ae667c;
+}
+
+.timeline-item p {
+    font-size: 0.75rem;
+}
+
+.timeline-line {
+    width: 45px;
+    height: 1px;
+    background: #d6a0ae;
+}
+
+.closing-story {
+    margin-top: 30px !important;
+}
+
+
+/* =========================
+   DISTANCE
+========================= */
+
+.distance-section {
+    background: #fff8fa;
+}
+
+.distance-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.location-heart {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f2ccd6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #a85e73;
+    margin-bottom: 8px;
+}
+
+.location small {
+    color: #91606e;
+}
+
+.dotted-line {
+    color: #d39aaa;
+    letter-spacing: 6px;
+    margin: 0 20px;
+}
+
+
+/* =========================
+   LOVE CARDS
+========================= */
+
+.love-section {
+    background: #fdf0f4;
+}
+
+.instruction {
+    color: #aa7180;
+    margin-bottom: 25px !important;
+}
+
+.love-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+.love-card {
+    border: 1px solid #e3bbc6;
+    background: rgba(255,255,255,0.7);
+    padding: 25px 15px;
+    border-radius: 20px;
+    color: #815463;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.love-card:last-child {
+    grid-column: span 2;
+}
+
+.love-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(140,70,90,0.1);
+}
+
+.love-card span {
+    display: block;
+    font-size: 2rem;
+    color: #bd7187;
+    margin-bottom: 8px;
+}
+
+.love-message {
+    min-height: 80px;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #875766;
+}
+
+
+/* =========================
+   WISHES
+========================= */
+
+.wishes-section {
+    background: #fff8fa;
+}
+
+.wish-card {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(130,70,90,0.08);
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories-section {
+    background: #f9e9ee;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 700px;
+    margin: 40px auto 20px;
+}
+
+.photo-placeholder {
+    min-height: 220px;
+    background: rgba(255,255,255,0.75);
+    border: 1px dashed #d7a2b1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #9a6675;
+}
+
+.photo-placeholder span {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.photo-placeholder p {
+    font-size: 0.8rem;
+}
+
+.photo-note {
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+    background: #fff8fa;
+    padding: 120px 20px;
+}
+
+.letter {
+    max-width: 720px;
+    padding: 55px 45px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 20px 70px rgba(120,70,85,0.1);
+    text-align: left;
+    position: relative;
+}
+
+.letter h2,
+.letter .eyebrow,
+.letter-divider {
+    text-align: center;
+}
+
+.letter p {
+    margin-bottom: 25px;
+}
+
+.letter-final {
+    margin-top: 40px;
+}
+
+.letter-love {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    color: #a65c72;
+    text-align: center;
+    margin: 40px 0 !important;
+}
+
+.signature {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.6rem;
+    color: #8e5668;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section {
+    background:
+        radial-gradient(
+            circle at center,
+            #fff 0%,
+            #f5dce4 100%
+        );
+    min-height: 100vh;
+}
+
+.final-content {
+    text-align: center;
+}
+
+.final-heart {
+    font-size: 6rem;
+    color: #b8667d;
+    margin: 25px;
+    animation: heartbeat 2s infinite;
+}
+
+.final-love {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    color: #a65c72;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   POPUP
+========================= */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(75,40,50,0.45);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 25px;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff8fa;
+    padding: 50px 30px;
+    border-radius: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(50,20,30,0.2);
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    color: #956171;
+    cursor: pointer;
+}
+
+.popup-heart {
+    font-size: 4rem;
+    color: #bb6c82;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    color: #d98fa1;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatHeart 8s linear forwards;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 90px 18px;
+    }
+
+    h2 {
+        font-size: 3.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .story-card,
+    .wish-card {
+        padding: 30px 20px;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .timeline-line {
+        width: 1px;
+        height: 35px;
+    }
+
+    .distance-visual {
+        transform: scale(0.8);
+    }
+
+    .love-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .love-card:last-child {
+        grid-column: span 1;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 40px 25px;
+    }
+
+    .letter-love {
+        font-size: 1.7rem;
+    }
+
+    .final-love {
+        font-size: 2.5rem;
+    }
+}
